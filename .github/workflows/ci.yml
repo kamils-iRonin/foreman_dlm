@@ -5,6 +5,10 @@ env:
   DATABASE_URL: postgresql://postgres:@localhost/test
   DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL: true
   TESTOPTS: "-v"
+  EXECUTORS_COUNT: 2
+  EXECUTOR_MEMORY_LIMIT: 100mb
+  EXECUTOR_MEMORY_MONITOR_DELAY: 300
+  EXECUTOR_MEMORY_MONITOR_INTERVAL: 30
 jobs:
   rubocop:
     runs-on: ubuntu-latest
